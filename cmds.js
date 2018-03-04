@@ -220,7 +220,7 @@ exports.playCmd = rl => {
 
 exports.creditsCmd = rl => {
 		log('Autor de la práctica:');
-  		log('jllaso', 'green');
+  		log('JOSE LUIS LASO FERNANDEZ', 'green');
   		rl.prompt();
 
 };
