@@ -136,13 +136,13 @@ exports.testCmd =  (rl,id) =>
 
                 if(answer.toLowerCase().trim() === quiz.answer.toLowerCase().trim())
             {
-                log(`Su respuesta es correcta`);
+                log(`Su respuesta es correcta.`);
                 biglog('Correcta', 'green');
                 rl.prompt();
             }
         else
             {
-                log(`Su respuesta es incorrecta`);
+                log(`Su respuesta es incorrecta.`);
                 biglog('Incorrecta', 'red');
                 rl.prompt();
             }
@@ -196,7 +196,7 @@ exports.playCmd = rl => {
                     if(answer.toLowerCase().trim() === quiz.answer.toLowerCase().trim())
                 {
                     score++;
-                    log(`CORRECTO - Lleva ${score} aciertos`);
+                    log(`CORRECTO - Lleva ${score} aciertos.`);
                     playOne();
                 }
             else
