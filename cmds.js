@@ -411,7 +411,7 @@ exports.playCmd = rl => {
             return;
         }
     })
-`
+
     })};
     models.quiz.findAll({raw: true})
         .then(quizzes => {
