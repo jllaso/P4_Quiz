@@ -387,7 +387,7 @@ exports.playCmd = rl => {
             if(toBeResolved.length <= 0){
             log(`No hay nada más que preguntar.`);
             log(`Fin del juego. Aciertos: ${score}`);
-            biglog(score, 'magenta');
+            biglog(`${score}`, 'blue');
             return;
         }
 
@@ -402,16 +402,16 @@ exports.playCmd = rl => {
             if(answer.toLowerCase().trim() === quiz.answer.toLowerCase().trim())
         {
             score++;
-            log(`CORRECTO - Lleva ${score} aciertos.`);
+            log(`CORRECTO - Lleva ${score} aciertos.`, 'green');
             return playOne();
         }else{
             log(`INCORRECTO.`);
             log(`Fin del juego. Aciertos: ${score}`);
-            biglog(score, 'blue');
+            biglog(`${score}, 'blue');
             return;
         }
     })
-
+`
     })};
     models.quiz.findAll({raw: true})
         .then(quizzes => {
@@ -425,6 +425,8 @@ exports.playCmd = rl => {
         errorlog(`Error: ${error.message}`);
     })
     .then(() => {
+        log(`Ha obtenido ${score} puntos `);
+        biglog(`${score} PUNTOS`);
         rl.prompt();
     });
 
