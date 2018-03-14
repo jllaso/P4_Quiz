@@ -416,7 +416,7 @@ exports.playCmd = rl => {
     models.quiz.findAll({raw: true})
         .then(quizzes => {
         toBeResolved=quizzes;
-    })
+    })``
     .then(() => {
 
         return playOne();
