@@ -407,7 +407,7 @@ exports.playCmd = rl => {
         }else{
             log(`INCORRECTO.`);
             log(`Fin del juego. Aciertos: ${score}`);
-            biglog(`${score}, 'blue');
+            biglog(`${score}`, 'blue');
             return;
         }
     })
