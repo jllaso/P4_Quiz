@@ -50,11 +50,11 @@ const validateId = id => {
 
     return new Sequelize.Promise((resolve, reject) => {  //creo una nueva promesa
         if (typeof id === "undefined") {  //veo si está o no indefinido
-            reject(new Error(`Falta el parametro <id>.`));
+            reject(new Error(`El valor del parámetro id no es válido.`));
     } else {
             id = parseInt(id);
             if(Number.isNaN(id)) { //veo si no es un número
-                rejects(new Error(`El valor del parámetro <id> no es un número.`));
+                rejects(new Error(`El valor del parámetro id no es un número.`));
             } else {
                 resolve(id); //devuelve el id con el que quiero trabajar
             }
@@ -309,6 +309,9 @@ exports.testCmd =  (rl,id) =>
     .catch(error => {
     errorlog(error.message);
     })
+    .then(()=> {
+        rl.prompt();
+})
 
 };
 
